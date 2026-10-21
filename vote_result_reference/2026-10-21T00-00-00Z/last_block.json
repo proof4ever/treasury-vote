@@ -1,0 +1,30 @@
+{
+  "mc_seqno": 63060395,
+  "timestamp": 1792540800,
+  "timestamp_utc": "2026-10-21T00:00:00Z",
+  "block": {
+    "workchain": -1,
+    "shard": "8000000000000000",
+    "seqno": 63060395,
+    "root_hash": "1d5a6eaa4c33c659b59cea0ee83f3a483b95d713b185c46b339d7163b7e0fba0",
+    "file_hash": "7fdc76d5533c283d7bb81508e08e0e3608ebf201f59dee3a1584665051921d53"
+  },
+  "block_utime": 1792540798,
+  "block_utime_utc": "2026-10-20T23:59:58Z",
+  "next_block_seqno": 63060396,
+  "next_block_utime": 1792540804,
+  "base_key_block_seqno": 62993660,
+  "applied_mc_blocks": 66735,
+  "shard_blocks": [
+    {
+      "workchain": 0,
+      "shard": "8000000000000000",
+      "seqno": 73026070,
+      "root_hash": "edeca6614e3b75f1a933071c58de9d7f129003becf1b59bf15c1ba393821f51e",
+      "file_hash": "e219ae12c454643d49c4507b36f44906a5493629db0ad669a833a83130d9ab73"
+    }
+  ],
+  "applied_shard_blocks": [
+    70516
+  ]
+}

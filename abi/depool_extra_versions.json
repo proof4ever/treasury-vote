@@ -1,0 +1,7 @@
+{
+  "source": "ever-validator/contracts/Broxus/StEver (code hashes computed with `state_export code-hash` from the .tvc files)",
+  "versions": [
+    { "code_hash": "533adf8a5680849177b9f213f61c48dfd8d730597078670d2367a5eef77251fe", "label": "Broxus stEVER DePool.tvc", "abi_file": "StEverDePool.abi.json" },
+    { "code_hash": "a21a2e175dc87549280812ecfad50e860d60262fc2d1de6c2230a0108b762934", "label": "Broxus stEVER DePoolV1.tvc", "abi_file": "StEverDePool.abi.json" }
+  ]
+}

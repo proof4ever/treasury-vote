@@ -1,0 +1,914 @@
+{
+  "repository": "https://github.com/everx-labs/ton-labs-contracts",
+  "path": "solidity/depool",
+  "versions": [
+    {
+      "code_hash": "14e20e304f53e6da152eb95fffc993dbd28245a775d847eed043f7c78a503885",
+      "commit": "1942ab4e7490eb1f5062299890bc018f14e67125",
+      "date": "2021-02-01T12:38:10Z",
+      "tvc_sha256": "3c6a298973305661f34886af3f01b66f4a57865234c27dba27a08084a10e9a54",
+      "absent_participant_exit_code": 116,
+      "abi": {
+        "ABI version": 2,
+        "header": [
+          "time",
+          "expire"
+        ],
+        "functions": [
+          {
+            "name": "getParticipantInfo",
+            "inputs": [
+              {
+                "name": "addr",
+                "type": "address"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "total",
+                "type": "uint64"
+              },
+              {
+                "name": "withdrawValue",
+                "type": "uint64"
+              },
+              {
+                "name": "reinvest",
+                "type": "bool"
+              },
+              {
+                "name": "reward",
+                "type": "uint64"
+              },
+              {
+                "name": "stakes",
+                "type": "map(uint64,uint64)"
+              },
+              {
+                "components": [
+                  {
+                    "name": "remainingAmount",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "lastWithdrawalTime",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "withdrawalPeriod",
+                    "type": "uint32"
+                  },
+                  {
+                    "name": "withdrawalValue",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "owner",
+                    "type": "address"
+                  }
+                ],
+                "name": "vestings",
+                "type": "map(uint64,tuple)"
+              },
+              {
+                "components": [
+                  {
+                    "name": "remainingAmount",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "lastWithdrawalTime",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "withdrawalPeriod",
+                    "type": "uint32"
+                  },
+                  {
+                    "name": "withdrawalValue",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "owner",
+                    "type": "address"
+                  }
+                ],
+                "name": "locks",
+                "type": "map(uint64,tuple)"
+              },
+              {
+                "name": "vestingDonor",
+                "type": "address"
+              },
+              {
+                "name": "lockDonor",
+                "type": "address"
+              }
+            ]
+          },
+          {
+            "name": "getParticipants",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "participants",
+                "type": "address[]"
+              }
+            ]
+          }
+        ],
+        "data": [],
+        "events": []
+      }
+    },
+    {
+      "code_hash": "a46c6872712ec49e481a7f3fc1f42469d8bd6ef3fae906aa5b9927e5a3fb3b6b",
+      "commit": "e9cbc1c45530c1219487f38d1f28e1c7af79b628",
+      "date": "2020-12-11T14:34:15Z",
+      "tvc_sha256": "45841f07ac8ed223def9d3fee8e0a80de816a850d348c722ee29e04fe6ab7df6",
+      "absent_participant_exit_code": 116,
+      "abi": {
+        "ABI version": 2,
+        "header": [
+          "time",
+          "expire"
+        ],
+        "functions": [
+          {
+            "name": "getParticipantInfo",
+            "inputs": [
+              {
+                "name": "addr",
+                "type": "address"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "total",
+                "type": "uint64"
+              },
+              {
+                "name": "withdrawValue",
+                "type": "uint64"
+              },
+              {
+                "name": "reinvest",
+                "type": "bool"
+              },
+              {
+                "name": "reward",
+                "type": "uint64"
+              },
+              {
+                "name": "stakes",
+                "type": "map(uint64,uint64)"
+              },
+              {
+                "components": [
+                  {
+                    "name": "remainingAmount",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "lastWithdrawalTime",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "withdrawalPeriod",
+                    "type": "uint32"
+                  },
+                  {
+                    "name": "withdrawalValue",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "owner",
+                    "type": "address"
+                  }
+                ],
+                "name": "vestings",
+                "type": "map(uint64,tuple)"
+              },
+              {
+                "components": [
+                  {
+                    "name": "remainingAmount",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "lastWithdrawalTime",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "withdrawalPeriod",
+                    "type": "uint32"
+                  },
+                  {
+                    "name": "withdrawalValue",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "owner",
+                    "type": "address"
+                  }
+                ],
+                "name": "locks",
+                "type": "map(uint64,tuple)"
+              }
+            ]
+          },
+          {
+            "name": "getParticipants",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "participants",
+                "type": "address[]"
+              }
+            ]
+          }
+        ],
+        "data": [],
+        "events": []
+      }
+    },
+    {
+      "code_hash": "21bb78ae9b56ce930adb89bd1e69bdc3dca40683bade9b9a4dfe265129d21220",
+      "commit": "94bff38f9826a19a8ae55d5b48528912f21b3919",
+      "date": "2020-12-07T12:39:20Z",
+      "tvc_sha256": "8e8778abf7ca5e4429ec530d26a55fd87421c7ee2dcfe7ff5266ccdb41107f1e",
+      "absent_participant_exit_code": 116,
+      "abi": {
+        "ABI version": 2,
+        "header": [
+          "time",
+          "expire"
+        ],
+        "functions": [
+          {
+            "name": "getParticipantInfo",
+            "inputs": [
+              {
+                "name": "addr",
+                "type": "address"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "total",
+                "type": "uint64"
+              },
+              {
+                "name": "withdrawValue",
+                "type": "uint64"
+              },
+              {
+                "name": "reinvest",
+                "type": "bool"
+              },
+              {
+                "name": "reward",
+                "type": "uint64"
+              },
+              {
+                "name": "stakes",
+                "type": "map(uint64,uint64)"
+              },
+              {
+                "components": [
+                  {
+                    "name": "remainingAmount",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "lastWithdrawalTime",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "withdrawalPeriod",
+                    "type": "uint32"
+                  },
+                  {
+                    "name": "withdrawalValue",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "owner",
+                    "type": "address"
+                  }
+                ],
+                "name": "vestings",
+                "type": "map(uint64,tuple)"
+              },
+              {
+                "components": [
+                  {
+                    "name": "remainingAmount",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "lastWithdrawalTime",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "withdrawalPeriod",
+                    "type": "uint32"
+                  },
+                  {
+                    "name": "withdrawalValue",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "owner",
+                    "type": "address"
+                  }
+                ],
+                "name": "locks",
+                "type": "map(uint64,tuple)"
+              }
+            ]
+          },
+          {
+            "name": "getParticipants",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "participants",
+                "type": "address[]"
+              }
+            ]
+          }
+        ],
+        "data": [],
+        "events": []
+      }
+    },
+    {
+      "code_hash": "b4ad6c42427a12a65d9a0bffb0c2730dd9cdf830a086d94636dab7784e13eb38",
+      "commit": "0f44a746abf9ab0a3331053444c4f9fb95f1d01b",
+      "date": "2020-11-06T11:57:56Z",
+      "tvc_sha256": "0484a21b89029e413e426b9ee83292cd4b8f16b081a97a78bccb3a5d005257fc",
+      "absent_participant_exit_code": 116,
+      "abi": {
+        "ABI version": 2,
+        "header": [
+          "time",
+          "expire"
+        ],
+        "functions": [
+          {
+            "name": "getParticipantInfo",
+            "inputs": [
+              {
+                "name": "addr",
+                "type": "address"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "total",
+                "type": "uint64"
+              },
+              {
+                "name": "withdrawValue",
+                "type": "uint64"
+              },
+              {
+                "name": "reinvest",
+                "type": "bool"
+              },
+              {
+                "name": "reward",
+                "type": "uint64"
+              },
+              {
+                "name": "stakes",
+                "type": "map(uint64,uint64)"
+              },
+              {
+                "components": [
+                  {
+                    "name": "amount",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "lastWithdrawalTime",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "withdrawalPeriod",
+                    "type": "uint32"
+                  },
+                  {
+                    "name": "withdrawalValue",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "owner",
+                    "type": "address"
+                  }
+                ],
+                "name": "vestings",
+                "type": "map(uint64,tuple)"
+              },
+              {
+                "components": [
+                  {
+                    "name": "amount",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "lastWithdrawalTime",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "withdrawalPeriod",
+                    "type": "uint32"
+                  },
+                  {
+                    "name": "withdrawalValue",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "owner",
+                    "type": "address"
+                  }
+                ],
+                "name": "locks",
+                "type": "map(uint64,tuple)"
+              }
+            ]
+          },
+          {
+            "name": "getParticipants",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "participants",
+                "type": "address[]"
+              }
+            ]
+          }
+        ],
+        "data": [],
+        "events": []
+      }
+    },
+    {
+      "code_hash": "47175e162e35539bcc095666063046fcaa3a81bb19b79ed3c4b95773dbfc8394",
+      "commit": "5cb975a84429727a9ae4d8a2d1b51c4b1bff62ae",
+      "date": "2020-08-24T19:26:24Z",
+      "tvc_sha256": "090334f8652a1ba2d4e69b480adde546d0824437d3fe27ded340332f9809285c",
+      "absent_participant_exit_code": 116,
+      "abi": {
+        "ABI version": 2,
+        "header": [
+          "time",
+          "expire"
+        ],
+        "functions": [
+          {
+            "name": "getParticipantInfo",
+            "inputs": [
+              {
+                "name": "addr",
+                "type": "address"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "total",
+                "type": "uint64"
+              },
+              {
+                "name": "withdrawValue",
+                "type": "uint64"
+              },
+              {
+                "name": "reinvest",
+                "type": "bool"
+              },
+              {
+                "name": "reward",
+                "type": "uint64"
+              },
+              {
+                "name": "stakes",
+                "type": "map(uint64,uint64)"
+              },
+              {
+                "components": [
+                  {
+                    "name": "isActive",
+                    "type": "bool"
+                  },
+                  {
+                    "name": "amount",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "lastWithdrawalTime",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "withdrawalPeriod",
+                    "type": "uint32"
+                  },
+                  {
+                    "name": "withdrawalValue",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "owner",
+                    "type": "address"
+                  }
+                ],
+                "name": "vestings",
+                "type": "map(uint64,tuple)"
+              },
+              {
+                "components": [
+                  {
+                    "name": "isActive",
+                    "type": "bool"
+                  },
+                  {
+                    "name": "amount",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "lastWithdrawalTime",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "withdrawalPeriod",
+                    "type": "uint32"
+                  },
+                  {
+                    "name": "withdrawalValue",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "owner",
+                    "type": "address"
+                  }
+                ],
+                "name": "locks",
+                "type": "map(uint64,tuple)"
+              }
+            ]
+          },
+          {
+            "name": "getParticipants",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "participants",
+                "type": "address[]"
+              }
+            ]
+          }
+        ],
+        "data": [],
+        "events": []
+      }
+    },
+    {
+      "code_hash": "b429063b81ee5e8c8b53ef1b4c0cf127db4aa447f9cd96fdd0e8644a5cefb8b7",
+      "commit": "729b7df45050f7b748d6613f8dd730944ce9828d",
+      "date": "2020-08-24T06:57:25Z",
+      "tvc_sha256": "ddb128d8d2331012facf250f1dabe280f15bc311031a3c7641a82e499cff1878",
+      "absent_participant_exit_code": 116,
+      "abi": {
+        "ABI version": 2,
+        "header": [
+          "time",
+          "expire"
+        ],
+        "functions": [
+          {
+            "name": "getParticipantInfo",
+            "inputs": [
+              {
+                "name": "addr",
+                "type": "address"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "total",
+                "type": "uint64"
+              },
+              {
+                "name": "withdrawValue",
+                "type": "uint64"
+              },
+              {
+                "name": "reinvest",
+                "type": "bool"
+              },
+              {
+                "name": "reward",
+                "type": "uint64"
+              },
+              {
+                "name": "stakes",
+                "type": "map(uint64,uint64)"
+              },
+              {
+                "components": [
+                  {
+                    "name": "isActive",
+                    "type": "bool"
+                  },
+                  {
+                    "name": "amount",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "lastWithdrawalTime",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "withdrawalPeriod",
+                    "type": "uint32"
+                  },
+                  {
+                    "name": "withdrawalValue",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "owner",
+                    "type": "address"
+                  }
+                ],
+                "name": "vestings",
+                "type": "map(uint64,tuple)"
+              },
+              {
+                "components": [
+                  {
+                    "name": "isActive",
+                    "type": "bool"
+                  },
+                  {
+                    "name": "amount",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "lastWithdrawalTime",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "withdrawalPeriod",
+                    "type": "uint32"
+                  },
+                  {
+                    "name": "withdrawalValue",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "owner",
+                    "type": "address"
+                  }
+                ],
+                "name": "locks",
+                "type": "map(uint64,tuple)"
+              }
+            ]
+          },
+          {
+            "name": "getParticipants",
+            "inputs": [],
+            "outputs": [
+              {
+                "name": "participants",
+                "type": "address[]"
+              }
+            ]
+          }
+        ],
+        "data": [],
+        "events": []
+      }
+    },
+    {
+      "code_hash": "29a7b75ed2226521c7441d05527de81278df18e3ac3dc9d4c42f0749565941c5",
+      "commit": "f6db5ccd6a91a151d61acc764f48ed2d6663ef2f",
+      "date": "2020-08-22T21:48:02Z",
+      "tvc_sha256": "4378d2bf59be307cbc4c0f7574806f0c1700e80df1e61f4b7fb3b36874088f69",
+      "absent_participant_exit_code": 116,
+      "abi": {
+        "ABI version": 2,
+        "header": [
+          "time",
+          "expire"
+        ],
+        "functions": [
+          {
+            "name": "getParticipantInfo",
+            "inputs": [
+              {
+                "name": "addr",
+                "type": "address"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "total",
+                "type": "uint64"
+              },
+              {
+                "name": "withdrawValue",
+                "type": "uint64"
+              },
+              {
+                "name": "reinvest",
+                "type": "bool"
+              },
+              {
+                "name": "reward",
+                "type": "uint64"
+              },
+              {
+                "name": "stakes",
+                "type": "map(uint64,uint64)"
+              },
+              {
+                "components": [
+                  {
+                    "name": "isActive",
+                    "type": "bool"
+                  },
+                  {
+                    "name": "amount",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "lastWithdrawalTime",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "withdrawalPeriod",
+                    "type": "uint32"
+                  },
+                  {
+                    "name": "withdrawalValue",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "owner",
+                    "type": "address"
+                  }
+                ],
+                "name": "vestings",
+                "type": "map(uint64,tuple)"
+              },
+              {
+                "components": [
+                  {
+                    "name": "isActive",
+                    "type": "bool"
+                  },
+                  {
+                    "name": "amount",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "lastWithdrawalTime",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "withdrawalPeriod",
+                    "type": "uint32"
+                  },
+                  {
+                    "name": "withdrawalValue",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "owner",
+                    "type": "address"
+                  }
+                ],
+                "name": "locks",
+                "type": "map(uint64,tuple)"
+              }
+            ]
+          }
+        ],
+        "data": [],
+        "events": []
+      }
+    },
+    {
+      "code_hash": "b0ca0f91dc8229948a05eb4070c45c8247aadaa93b2665c710a6212d75c7c82c",
+      "commit": "625677dcab3438ae6ef7dd7dff0a19b5cbd1b9f4",
+      "date": "2020-08-18T11:41:25Z",
+      "tvc_sha256": "aef13d919fb51833fc5f86ed221fa4f18a91e4fdc11e7960fc46cf9a40fbd822",
+      "absent_participant_exit_code": 116,
+      "abi": {
+        "ABI version": 2,
+        "header": [
+          "time",
+          "expire"
+        ],
+        "functions": [
+          {
+            "name": "getParticipantInfo",
+            "inputs": [
+              {
+                "name": "addr",
+                "type": "address"
+              }
+            ],
+            "outputs": [
+              {
+                "name": "total",
+                "type": "uint64"
+              },
+              {
+                "name": "pauseStake",
+                "type": "uint64"
+              },
+              {
+                "name": "reinvest",
+                "type": "bool"
+              },
+              {
+                "name": "reward",
+                "type": "uint64"
+              },
+              {
+                "name": "stakes",
+                "type": "map(uint64,uint64)"
+              },
+              {
+                "components": [
+                  {
+                    "name": "isActive",
+                    "type": "bool"
+                  },
+                  {
+                    "name": "amount",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "lastWithdrawalTime",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "withdrawalPeriod",
+                    "type": "uint32"
+                  },
+                  {
+                    "name": "withdrawalValue",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "owner",
+                    "type": "address"
+                  }
+                ],
+                "name": "vestings",
+                "type": "map(uint64,tuple)"
+              },
+              {
+                "components": [
+                  {
+                    "name": "isActive",
+                    "type": "bool"
+                  },
+                  {
+                    "name": "amount",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "lastWithdrawalTime",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "withdrawalPeriod",
+                    "type": "uint32"
+                  },
+                  {
+                    "name": "withdrawalValue",
+                    "type": "uint64"
+                  },
+                  {
+                    "name": "owner",
+                    "type": "address"
+                  }
+                ],
+                "name": "locks",
+                "type": "map(uint64,tuple)"
+              }
+            ]
+          }
+        ],
+        "data": [],
+        "events": []
+      }
+    }
+  ]
+}

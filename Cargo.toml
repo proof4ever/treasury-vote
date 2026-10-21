@@ -1,0 +1,31 @@
+[package]
+name = "state_export"
+version = "0.1.0"
+edition = "2021"
+description = "Download Everscale key-block persistent state, extract balances/DePool stakes and build a pruned Merkle proof"
+
+[dependencies]
+anyhow = "1.0"
+clap = { version = "4.5", features = ["derive"] }
+env_logger = "0.11"
+hex = "0.4"
+log = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.40", features = ["rt-multi-thread", "macros", "time"] }
+rand = "0.8"
+num-bigint = "0.4"
+futures = "0.3"
+chrono = "0.4"
+memmap2 = "0.9"
+sha2 = "0.10"
+
+adnl = { git = "https://github.com/everx-labs/ever-adnl.git", tag = "0.11.32", features = ["client", "node"] }
+ever_abi = { git = "https://github.com/everx-labs/ever-abi.git", tag = "2.8.1" }
+ever_block = { git = "https://github.com/everx-labs/ever-block.git", tag = "1.11.20" }
+ever_vm = { git = "https://github.com/everx-labs/ever-vm.git", tag = "2.2.21" }
+ton_api = { git = "https://github.com/everx-labs/ever-tl.git", package = "ton_api", tag = "0.4.29" }
+ever-node = { git = "https://github.com/everx-labs/ever-node.git", rev = "e4068621a96d78969dd6df3087504d25b06fca6e", default-features = false, features = ["telemetry"] }
+
+[profile.release]
+debug = false
